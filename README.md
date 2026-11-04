@@ -1,7 +1,6 @@
 # 5-Stage Pipelined RISC-V Processor
 
-A 32-bit RISC-V processor implemented in Verilog, featuring a five-stage pipeline, data forwarding, hazard detection, and branch handling. The design was simulated using Icarus Verilog and synthesized and implemented using AMD Xilinx Vivado.
-
+A 32-bit processor implementing a subset of the RISC-V instruction set in Verilog, supporting ADD, SUB, AND, OR, SLT, ADDI, SLTI, LW, SW, BEQ, and JAL. The design features a five-stage pipeline with data forwarding, load-use hazard detection, and branch/jump resolution through pipeline flushing. Simulated using Icarus Verilog and synthesized and implemented using AMD Xilinx Vivado.
 ## Architecture
 
 The processor follows a five-stage pipeline:
