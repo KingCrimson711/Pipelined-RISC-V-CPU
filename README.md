@@ -101,8 +101,8 @@ Vivado reported an estimated total on-chip power of **22.001 W**, with a medium 
 
 ## Tools Used
 
-- **HDL:** Verilog
-- **Simulation:** Icarus Verilog
+- **HDL:** SystemVerilog
+- **Simulation:** Icarus Verilog (this was done on EDA Playground)
 - **Waveform Analysis:** VCD
 - **Synthesis and Implementation:** AMD Xilinx Vivado
 - **Operating System:** Ubuntu 24.04 LTS
