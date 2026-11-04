@@ -398,14 +398,7 @@ endmodule
 
 
 // =====================================================================
-// everything below is new (harris and harris pipelined risc-v).
-// the original modules above are not touched, so the multicycle
-// risc_v still works. the pipelined cpu is risc_v_pipe.
-// =====================================================================
-
-// control unit of the pipelined cpu: same decoders as control_signals,
-// but no fsm, it just decodes the instruction sitting in the decode stage
-// (the signals are then carried down the pipeline registers in risc_v_pipe)
+// everything below i svery sensetive 
 module control_signals_p (
 input [31:0] instruction,
 output reg regwrite,
@@ -476,7 +469,7 @@ end
 endmodule
 
 
-// hazard unit (the blue box at the bottom of the diagram)
+// hazard unit blue box at the bottom of the diagram
 module hazard_unit (
 input [4:0] rs1d,
 input [4:0] rs2d,
@@ -498,7 +491,7 @@ output reg [1:0] forwardbe
 );
 reg lwstall;
 
-// data forwarding (00 = from register file, 10 = from memory stage, 01 = from writeback)
+// data forwarding 
 always @(*) begin
 forwardae=2'b00;
 forwardbe=2'b00;
@@ -512,7 +505,7 @@ if(rs2e!=5'd0) begin
 end
 end
 
-// load use stall, and flush when a branch / jump is taken
+// load use stall, and flush when a branch or jump is taken
 always @(*) begin
 if(resultsrce0 && (rs1d==rde || rs2d==rde)) lwstall=1'b1;
 else lwstall=1'b0;
